@@ -92,7 +92,7 @@ RUN git clone https://github.com/emmas96/CoRob.git
 #WORKDIR /home/student/CoRob
 
 # Copy files for CoRob
-COPY ../CoRob/flight1.xyz /home/student/CoRob/Clustering
+COPY flight1.xyz /home/student/CoRob/Clustering
 #COPY flight2.xyz /home/student/CoRob/Clustering
 
 # Test /Martin
