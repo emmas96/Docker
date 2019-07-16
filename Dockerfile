@@ -79,7 +79,6 @@ WORKDIR /home/student/
 #RUN git clone https://github.com/martine94/SummerInternship.git
 RUN git clone https://github.com/tatarchm/tangent_conv.git
 #WORKDIR /home/student/SummerInternship
-WORKDIR /home/student/tangent_conv
 
 # Copy files for the tangent convolutional network (Semantic3D)
 # outputFiles is needed to run tc.py --precompute
@@ -94,9 +93,9 @@ RUN git clone https://github.com/emmas96/CoRob.git
 #WORKDIR /home/student/CoRob
 
 # Copy files for CoRob
-#COPY CoRob/flight1.xyz /home/student/CoRob/Clustering
-#COPY CoRob/flight2.xyz /home/student/CoRob/Clustering
+COPY CoRob/flight1.xyz /home/student/CoRob/Clustering
+COPY CoRob/flight2.xyz /home/student/CoRob/Clustering
 
 # Test /Martin
 #COPY libcudnn7_7.1.3.16-1+cuda8.0_amd64.deb /home/student/
-#COPY  Stanford/outputFiles /home/student/SummerInternship/outputFiles
+#COPY Stanford/outputFiles /home/student/SummerInternship/outputFiles
