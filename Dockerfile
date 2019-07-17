@@ -93,8 +93,8 @@ RUN git clone https://github.com/emmas96/CoRob.git
 #WORKDIR /home/student/CoRob
 
 # Copy files for CoRob
-COPY flight1.xyz /home/student/CoRob/Clustering
-COPY flight2.xyz /home/student/CoRob/Clustering
+#COPY flight1.xyz /home/student/CoRob/Clustering
+#COPY flight2.xyz /home/student/CoRob/Clustering
 
 # Test /Martin
 #COPY libcudnn7_7.1.3.16-1+cuda8.0_amd64.deb /home/student/
