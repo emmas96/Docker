@@ -89,6 +89,7 @@ RUN git clone https://github.com/tatarchm/tangent_conv.git
 # and is needed for tc.py --train
 #COPY data /home/student/tangent_conv/data
 COPY dhn /home/student/tangent_conv/experiments/semantic3d/dhn
+COPY sg27_station1 /home/student/tangent_conv/data/raw/semantic3d/sg27_station1
 
 # Clone CoRob for clustering
 WORKDIR /home/student/
