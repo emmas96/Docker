@@ -36,7 +36,11 @@ RUN pip3 install \
 	joblib==0.11 \
 	wget \
 	open3d \
-	open3d-python 
+	open3d-python \
+	dask
+
+# Needed for converting large semantic3d txt files to pcd format
+RUN pip3 install dask[dataframe] --upgrade
 	
 # For visualizations with tangent convolution: numpy == 1.16.1 is needed
 	
