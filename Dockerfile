@@ -66,10 +66,11 @@ RUN set -ev && apt-get install -y \
 	python-tk \
 	python3-tk
 	
+# cmake has been changed with two added flags, not tested if it works yet, it should solve the visualization problem
 WORKDIR /home/student/Open3D/build
 RUN apt-get update && \
 	apt-get -y install cmake protobuf-compiler && \
-	cmake ../src && \
+	cmake ../src -DBUILD_GLEW=ON -DBUILD_GLFW=ON && \
 	make && \
 	make install
 # make install is a test, supposed to get OpenGL (draw geometries in Open3d) to work
