@@ -64,16 +64,15 @@ RUN set -ev && apt-get install -y \
 	python-dev \
 	python3-dev \
 	python-tk \
-	python3-tk \
-	libosmesa6-dev 
-
+	python3-tk 
+	#libosmesa6-dev 
 # libosmesa6-dev is for creating a headless context
 	
 # cmake ../src -DBUILD_GLEW=ON -DBUILD_GLFW=ON should solve the visualization problem but didn't 
 WORKDIR /home/student/Open3D/build
 RUN apt-get update && \
 	apt-get -y install cmake protobuf-compiler && \
-	cmake ../src -DBUILD_GLEW=ON -DBUILD_GLFW=ON && \
+	cmake ../src && \
 	make
 
 # Clean up
