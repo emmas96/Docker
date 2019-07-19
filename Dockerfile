@@ -69,14 +69,12 @@ RUN set -ev && apt-get install -y \
 
 # libosmesa6-dev is for creating a headless context
 	
-# cmake has been changed with two added flags, not tested if it works yet, it should solve the visualization problem
+# cmake ../src -DBUILD_GLEW=ON -DBUILD_GLFW=ON should solve the visualization problem but didn't 
 WORKDIR /home/student/Open3D/build
 RUN apt-get update && \
 	apt-get -y install cmake protobuf-compiler && \
-	cmake ../src -DBUILD_GLEW=ON -DBUILD_GLFW=ON && \
-	make && \
-	make install
-# make install is a test, supposed to get OpenGL (draw geometries in Open3d) to work
+	cmake ../src && \
+	make
 
 # Clean up
 RUN apt-get clean && \
