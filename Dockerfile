@@ -94,7 +94,7 @@ WORKDIR /home/student/SummerInternship
 # and is needed for tc.py --train
 #COPY data /home/student/tangent_conv/data
 #COPY dhn /home/student/tangent_conv/experiments/semantic3d/dhn
-COPY inputFiles /home/student/SummerInternship/inputFiles
+#COPY inputFiles /home/student/SummerInternship/inputFiles
 
 # Clone CoRob for clustering
 WORKDIR /home/student/
