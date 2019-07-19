@@ -65,7 +65,7 @@ RUN set -ev && apt-get install -y \
 	python3-dev \
 	python-tk \
 	python3-tk \
-	#libosmesa6-dev 
+	libosmesa6-dev 
 
 # libosmesa6-dev is for creating a headless context
 	
@@ -73,7 +73,7 @@ RUN set -ev && apt-get install -y \
 WORKDIR /home/student/Open3D/build
 RUN apt-get update && \
 	apt-get -y install cmake protobuf-compiler && \
-	cmake ../src && \
+	cmake ../src -DBUILD_GLEW=ON -DBUILD_GLFW=ON && \
 	make
 
 # Clean up
