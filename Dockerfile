@@ -79,7 +79,8 @@ RUN apt-get clean && \
 	rm -rf /cuda/
 
 # Clone original repository for the tangent convolutional network 
-WORKDIR /home/student/#RUN git clone https://github.com/tatarchm/tangent_conv.git
+WORKDIR /home/student/
+RUN git clone https://github.com/tatarchm/tangent_conv.git
 #WORKDIR /home/student/tangent_conv
 
 # Copy files for the tangent convolutional network (Semantic3D)
