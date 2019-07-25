@@ -98,4 +98,4 @@ RUN git clone https://github.com/emmas96/CoRob.git
 WORKDIR /home/student/CoRob
 
 # Copy files for CoRob
-#COPY RawData /home/student/CoRob/Clustering/RawData
+COPY RawData /home/student/CoRob/Clustering/RawData
