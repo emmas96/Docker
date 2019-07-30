@@ -98,3 +98,4 @@ WORKDIR /home/student/CoRob
 # Copy files for CoRob
 # COPY RawData /home/student/CoRob/Clustering/RawData
 # COPY ClusteringResults /home/student/CoRob/Clustering/Results
+COPY Raw /home/student/CoRob/PrepareCoRobData/Raw
