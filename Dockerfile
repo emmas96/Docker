@@ -37,10 +37,12 @@ RUN pip3 install \
 	wget \
 	open3d \
 	open3d-python \
-	dask
+	dask \
+	dask[dataframe] --upgrade \
+	plotly
 
 # Needed for converting large semantic3d txt files to pcd format
-RUN pip3 install dask[dataframe] --upgrade
+#RUN pip3 install dask[dataframe] --upgrade
 	
 # For visualizations with tangent convolution: numpy == 1.16.1 is needed 
 # but so far visualizations doens't work inside this docker bacouse of a problem with OpenGL 
